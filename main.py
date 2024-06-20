@@ -24,6 +24,9 @@ def main(input_str: str) -> str:
       b = int(operands[1].strip())
   except ValueError:
       raise ValueError("Invalid input. Please enter integers only.")
+    
+  if not (1 <= a <= 10) or not (1 <= b <= 10):
+        raise ValueError("Numbers must be between 1 and 10 inclusive.")
 
   if operator == '+':
       result = a + b
